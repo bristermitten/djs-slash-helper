@@ -14,12 +14,12 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@discordjs/rest": "^2.4.0",
-    "discord-api-types": "^0.37.103",
-    "discord.js": "^14.16.3"
+    "@discordjs/rest": "^2.4.2",
+    "discord-api-types": "^0.37.118",
+    "discord.js": "^14.17.3"
   },
   "devDependencies": {
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.3"
   },
   "keywords": [
     "discord.js",
