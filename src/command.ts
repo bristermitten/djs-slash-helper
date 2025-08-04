@@ -5,11 +5,11 @@ import {
     ApplicationCommandOptionType,
     ApplicationCommandType
 } from 'discord-api-types/v10';
-import {CommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction} from 'discord.js'
+import {ChatInputCommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction} from 'discord.js'
 
 export type InteractionFor<T extends ApplicationCommandType> = {
     [ApplicationCommandType.Message]: MessageContextMenuCommandInteraction,
-    [ApplicationCommandType.ChatInput]: CommandInteraction,
+    [ApplicationCommandType.ChatInput]: ChatInputCommandInteraction,
     [ApplicationCommandType.User]: UserContextMenuCommandInteraction
     [ApplicationCommandType.PrimaryEntryPoint]: never
 }[T]
@@ -43,7 +43,7 @@ export interface ExecutableSubcommandGroup extends APIApplicationCommandSubcomma
 }
 
 export interface ExecutableSubcommand extends APIApplicationCommandSubcommandOption {
-    handle(interaction: CommandInteraction): unknown
+    handle(interaction: ChatInputCommandInteraction): unknown
 }
 
 export function isChatInputCommand(command: Command<any>): command is ChatInputCommand {

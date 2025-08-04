@@ -16,7 +16,7 @@
   "dependencies": {
     "@discordjs/rest": "^2.4.2",
     "discord-api-types": "^0.37.118",
-    "discord.js": "^14.17.3"
+    "discord.js": "^14.21.0"
   },
   "devDependencies": {
     "typescript": "^5.7.3"
